@@ -1,0 +1,30 @@
+[
+  {
+    "title": "title1",
+    "price": 100,
+    "thumbnail": "url de la foto del producto 1",
+    "id": 1
+  },
+  {
+    "title": "title2",
+    "price": 200,
+    "thumbnail": "url de la foto del producto 2",
+    "id": 2
+  },
+  {
+    "title": "title3",
+    "price": 300,
+    "thumbnail": "url de la foto del producto 3",
+    "id": 3
+  },
+  {
+    "name": "name",
+    "lastName": "last name",
+    "id": 4
+  },
+  {
+    "name": "name",
+    "lastName": "last name",
+    "id": 5
+  }
+]
