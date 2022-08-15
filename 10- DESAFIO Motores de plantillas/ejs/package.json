@@ -1,0 +1,19 @@
+{
+  "name": "ejs",
+  "version": "0.0.0",
+  "description": "desafio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "desafio",
+    "10"
+  ],
+  "author": "Cristian Bolivar",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}

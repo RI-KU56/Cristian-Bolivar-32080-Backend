@@ -1,0 +1,19 @@
+{
+  "name": "pug",
+  "version": "0.0.0",
+  "description": "desafio 10 pug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "10",
+    "pug"
+  ],
+  "author": "Cristian Bolivar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pug": "^3.0.2"
+  }
+}
