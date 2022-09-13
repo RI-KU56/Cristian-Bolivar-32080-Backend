@@ -1,0 +1,82 @@
+--crear base
+ use ecommerce
+
+--crear colecciones
+ db.createCollection("mensajes")
+ db.createCollection("productos")
+
+ show collections
+
+--1) y 2)
+ db.productos.insertMany([
+ {name: 'producto1', descripcion: 'descripcion1', code: 010101, thumbnail: 'thumbnail1', price: 120, stock: 100}, 
+ {name: 'producto2', descripcion: 'descripcion2', code: 222222, thumbnail: 'thumbnail2', price: 580, stock: 200}, 
+ {name: 'producto3', descripcion: 'descripcion3', code: 333333, thumbnail: 'thumbnail3', price: 900, stock: 300}, 
+ {name: 'producto4', descripcion: 'descripcion4', code: 444444, thumbnail: 'thumbnail4', price: 1280, stock: 400}, 
+ {name: 'producto5', descripcion: 'descripcion5', code: 555555, thumbnail: 'thumbnail5', price: 1700, stock: 500}, 
+ {name: 'producto6', descripcion: 'descripcion6', code: 666666, thumbnail: 'thumbnail6', price: 2300, stock: 600}, 
+ {name: 'producto7', descripcion: 'descripcion7', code: 777777, thumbnail: 'thumbnail7', price: 2860, stock: 700}, 
+ {name: 'producto8', descripcion: 'descripcion8', code: 888888, thumbnail: 'thumbnail8', price: 3350, stock: 800}, 
+ {name: 'producto9', descripcion: 'descripcion9', code: 999999, thumbnail: 'thumbnail9', price: 4320, stock: 900}, 
+ {name: 'producto10', descripcion: 'descripcion10', code: 101010, thumbnail: 'thumbnail10', price: 4990, stock: 101}])
+
+ db.mensajes.insertMany([
+ {email: 'email1@email.com', message: 'Hola1', date: '01/01/20'}, 
+ {email: 'email2@email.com', message: 'Hola2', date: '02/02/20'}, 
+ {email: 'email3@email.com', message: 'Hola3', date: '03/03/20'}, 
+ {email: 'email4@email.com', message: 'Hola4', date: '04/04/20'}, 
+ {email: 'email5@email.com', message: 'Hola5', date: '05/05/20'}, 
+ {email: 'email6@email.com', message: 'Hola6', date: '06/06/20'}, 
+ {email: 'email7@email.com', message: 'Hola7', date: '07/07/20'}, 
+ {email: 'email8@email.com', message: 'Hola8', date: '08/08/20'}, 
+ {email: 'email9@email.com', message: 'Hola9', date: '09/09/20'}, 
+ {email: 'email10@email.com', message: 'Hola10', date: '10/10/20'}])
+
+--3)
+ db.productos.find()
+ db.mensajes.find()
+
+--4)
+ db.productos.estimatedDocumentCount()
+ db.mensajes.estimatedDocumentCount()
+
+--5)
+---a)
+  db.productos.insertOne({name: 'product11', descripcion: 'descripcion11', code: 111111, thumbnail: 'thumbnail11', price: 820, stock: 110})
+
+---b)
+  db.productos.find({name: 'producto8'})
+
+---b)i)
+    db.productos.find({price: {$lt: 1000}})
+
+---b)ii)
+    db.productos.find({$and: [{price: {$gte: 1000}},{price: {$lte: 3000}}]})
+
+---b)iii)
+    db.productos.find({price: {$gte: 3000}})
+
+---b)iv)
+    db.productos.find().sort({price: 1}).limit(1).skip(2)
+
+---c)
+  db.productos.updateMany({}, {$set: {stock: 100}}, {upsert: true})
+
+---d)
+  db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock: 0}})
+
+---e)
+  db.productos.deleteMany({price: {$lt: 1000}})
+
+--6)
+ db.createUser({user: 'pepe', pwd: 'asd456', roles: [{role: 'read', db: 'ecommerce'}]})
+
+ Successfully added user: {
+         "user" : "pepe",
+         "roles" : [
+                 {
+                         "role" : "read",
+                         "db" : "ecommerce"
+                 }
+         ]
+ }
