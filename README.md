@@ -59,3 +59,7 @@
 # CLASE 30
 
 ### Desafío  Servidor con balance de carga
+
+# CLASE 32
+
+### Desafío  Loggers, gzip y análisis de performance
