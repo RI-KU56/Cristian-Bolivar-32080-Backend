@@ -63,3 +63,11 @@
 # CLASE 32
 
 ### Desafío  Loggers, gzip y análisis de performance
+
+# CLASE 34
+
+### Desafío  Desplegar nuestro proyecto en la nube
+
+# CLASE 36
+
+### Preentrega Tercera entrega del Proyecto Final
