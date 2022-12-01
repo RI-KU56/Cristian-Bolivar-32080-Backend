@@ -75,3 +75,7 @@
 # CLASE 38
 
 ### Desafío Dividir en capas nuestro proyecto
+
+# CLASE 40
+
+### Desafío Mejorar la arquitectura de nuestra API
