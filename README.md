@@ -79,3 +79,7 @@
 # CLASE 40
 
 ### Desafío Mejorar la arquitectura de nuestra API
+
+# CLASE 42
+
+### Desafío Testeamos nuestra API REST
