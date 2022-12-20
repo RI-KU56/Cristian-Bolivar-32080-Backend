@@ -83,3 +83,11 @@
 # CLASE 42
 
 ### Desafío Testeamos nuestra API REST
+
+# CLASE 44
+
+### Desafío Reformar para usar GraphQL
+
+# CLASE 46
+
+### Desafío Reformar para usar otro framework
